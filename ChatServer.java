@@ -22,7 +22,8 @@ public class ChatServer {
             DatagramPacket packetRcvd = new DatagramPacket(new byte[MAX_UDP], MAX_UDP);
             serverSocket.receive(packetRcvd);
             byte rcvdData[]= packetRcvd.getData();
-			System.out.printf("Client %s sent %s \n", packetRcvd.getSocketAddress().toString(), new String (rcvdData));
+            System.out.printf("Client %s sent %s \n",
+              packetRcvd.getSocketAddress().toString(), new String (rcvdData));
 
         }
         }
